@@ -91,7 +91,9 @@ ENV/
 .ropeproject
 
 database/
+whoosh_index/
 media/
+/static/
 .idea/
 *.sqlite3
 fabfile.py
