@@ -27,6 +27,9 @@
 /**
  * 2.0 - General Elements
  */
+body {
+    background-color: red;
+}
 
 * {
     outline: none;
