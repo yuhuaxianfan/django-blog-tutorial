@@ -7,13 +7,18 @@ services:
       dockerfile: ./compose/django/Dockerfile
     command: /gunicorn.sh
     volumes:
-      - .:/app
+      - static-file:/app/static
+      - sqlite3-db:/app/database
 
   nginx:
     build: ./compose/nginx
     depends_on:
       - django
-    volumes_from:
-      - django
+    volumes:
+      - static-file:/home/app/static
     ports:
       - "0.0.0.0:80:80"
+
+volumes:
+  static-file: {}
+  sqlite3-db: {}
