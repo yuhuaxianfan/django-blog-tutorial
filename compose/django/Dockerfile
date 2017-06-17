@@ -15,8 +15,7 @@ RUN chmod +x /gunicorn.sh
 COPY . /app
 
 RUN mkdir /app/static
-RUN mkdir /app/database
-RUN python /app/manage.py migrate
+RUN mkdir -p /app/database
 RUN chown -R django /app
 
 USER django

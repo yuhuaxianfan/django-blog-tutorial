@@ -60,6 +60,8 @@ class Post(models.Model):
 
     # 新增 views 字段记录阅读量
     views = models.PositiveIntegerField(default=0)
+    comments_count = models.PositiveIntegerField(default=0)
+    share_count = models.PositiveIntegerField(default=0)
 
     # 这是分类与标签，分类与标签的模型我们已经定义在上面。
     # 我们在这里把文章对应的数据库表和分类、标签对应的数据库表关联了起来，但是关联形式稍微有点不同。
