@@ -17,7 +17,7 @@ services:
     volumes:
       - static-file:/home/app/static
     ports:
-      - "0.0.0.0:80:80"
+      - "0.0.0.0:8000:80"
 
 volumes:
   static-file: {}
